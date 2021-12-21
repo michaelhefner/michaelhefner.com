@@ -59,7 +59,7 @@ p {
 
 header {
     position: fixed;
-    padding: .75rem 0 0.15rem 0;
+    padding: 1rem 0 1rem 0;
     background: rgb(54, 91, 253);
     display: flex;
     flex-direction: column;
@@ -371,7 +371,7 @@ font-size: 1.3rem;
 
 #profile-img img {
     border-radius: 50%;
-    margin: -50% 0;
+    margin: -55% 0;
     padding-top: 50%;
     border-bottom: solid 2px #000;
     z-index: -1;
