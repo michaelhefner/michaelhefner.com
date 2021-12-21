@@ -255,6 +255,8 @@ aside h3 {
     padding: 1rem 1.25rem 1rem 0.5rem;
     box-shadow: 0 0 3px rgba(50, 50, 50, 0.7);
     border-radius: 0 7px 7px 0;
+    font-size: 5rem;
+
 }
 
 section h2 {
@@ -344,6 +346,13 @@ picture.social img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#certs div h2{
+    font-size: 2.5rem;
+}
+    #certs div ul li a h3{
+font-size: 1.3rem;
 }
 
 #certs picture img {
