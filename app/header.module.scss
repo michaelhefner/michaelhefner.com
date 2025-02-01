@@ -1,0 +1,29 @@
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: column;
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        border-bottom: 1px solid var(--secondary);
+    }
+    nav {
+        display: grid;
+        justify-content: center;
+        a {
+            grid-row: 1;
+            padding: .5rem 1rem;
+            transition: all .3s;
+            border-bottom: solid 1px transparent;
+            &:hover {
+                border-bottom: solid 1px var(--secondary);
+                color: var(--white);
+
+            }
+        }
+    }
+  }
