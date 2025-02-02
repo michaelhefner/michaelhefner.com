@@ -1,11 +1,12 @@
 import Certs from "./certs";
 import styles from "./page.module.css";
 import Link from "next/link";
-// import prisma from "../lib/prisma";
+import prisma from "../lib/prisma";
 // import data from "../data/data"
 
 export default async function Home() {
-  // console.log(data);
+  await prisma.code.findMany();
+  console.log(await prisma.code.findMany());
   // data.forEach(async (item) => {
   //   await prisma.code.create({ data: item });
   // })
