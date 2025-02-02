@@ -1,8 +1,0 @@
-[
-    {
-        "id": 1,
-        "name": "Code Collection 1",
-        "description": "This is the first code collection",
-        "code": "\nconst userRomanNumeral = document.querySelector('[name=roman-numeral]')/;"
-    }
-]
