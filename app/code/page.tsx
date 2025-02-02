@@ -3,12 +3,12 @@ import Link from "next/link";
 import Code from "../../components/code/code";
 import './code.scss';
 import data from "../../data/data";
-import { useEffect, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 
 const Page = () => {
-  const [displayData, setDisplayData] = useState();
+  const [displayData, setDisplayData] = useState<JSX.Element[]>([]);
+  const [displayList, setDisplayList] = useState<JSX.Element[]>([]);
   useEffect(() => {
-    console.log("USE EFFECT")
     setDisplayData(() => {
       return data.map((item) => {
         const key = item.id;
@@ -26,39 +26,21 @@ const Page = () => {
         )
       })
     });
+    setDisplayList(() => {
+      return data.map((item, key) => {
+        return (
+            <li id={`${key}`} key={`${key}-${item.id}`}>
+              <a href={`#${item.id}`}>{item.title}</a>
+            </li>
+        );
+      });
+    })
   },[])
-  // const returnData = () => {
-  //   return data.map((item) => {
-  //     const key = item.id;
-  //     return (
-  //       <div className="code-item" id={key} key={key}>
-  //         {item.title && (<h2>{item.title}</h2>)}
-  //         <p>{item.description}</p>
-  //         {item.attributionURL && (<Link
-  //           href={item.attributionURL}
-  //         >
-  //           Found on {item.attributionText}
-  //         </Link>)}
-  //         <Code code={item.code} />
-  //       </div>
-  //     )
-  //   });
-  // }
-
-  const links = data.map((item, key) => {
-    // console.log(`${key}-${item.id}`);
-    return (
-      <>
-        <li id={`${key}`} key={`${key}-${item.id}`}>
-          <a href={`#${item.id}`}>{item.title}</a>
-        </li>
-      </>
-    );
-  });
+  
   return (
     <>
       <ul>
-        {links}
+        {displayList}
       </ul>
       <div className="code-container">
         {displayData}
