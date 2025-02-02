@@ -1,0 +1,22 @@
+.code-container {
+    margin: 1rem;
+    display: grid;
+    grid-template: auto / auto ;
+    justify-content: center;
+    row-gap: 6rem;
+    column-gap: 2rem;
+    a {
+        color: rebeccapurple;
+        text-decoration: underline;
+        transition: all .4s ease-in-out;
+        &:hover {
+            background-color: #0001;
+            padding: .5rem;
+            margin: -.5rem;
+            border-radius: 30px;
+        }
+    }
+    pre {
+        margin-top: 1rem;
+    }
+}
