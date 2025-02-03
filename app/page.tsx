@@ -1,15 +1,8 @@
 import Certs from "./certs";
 import styles from "./page.module.css";
 import Link from "next/link";
-// import prisma from "../lib/prisma";
-// import data from "../data/data"
 
 export default async function Home() {
-  // console.log(data);
-  // data.forEach(async (item) => {
-  //   await prisma.code.create({ data: item });
-  // })
-
   return (
     <div className={styles.page}>
       <main className={styles.main}>

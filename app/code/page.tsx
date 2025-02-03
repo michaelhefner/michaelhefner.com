@@ -29,23 +29,25 @@ const Page = () => {
     setDisplayList(() => {
       return data.map((item, key) => {
         return (
-            <li id={`${key}`} key={`${key}-${item.id}`}>
-              <a href={`#${item.id}`}>{item.title}</a>
-            </li>
+          <li id={`${key}`} key={`${key}-${item.id}`}>
+            <a href={`#${item.id}`}>{item.title}</a>
+          </li>
         );
       });
     })
-  },[])
-  
+  }, [])
+
   return (
-    <>
-      <ul>
-        {displayList}
-      </ul>
+    <div className="main">
+      <div className="secondary-sticky-menu">
+        <ul>
+          {displayList}
+        </ul>
+      </div>
       <div className="code-container">
         {displayData}
       </div>
-    </>
+    </div>
   )
 }
 export default Page;
